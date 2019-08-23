@@ -3,15 +3,22 @@
 public class Line {
 
     private String name;
-    private Element [] lineElementArray;
+    private Element [] elementsArray;
 
     public Line () {
 
     }
     
+    public Line (Element... args) {
+        elementsArray = new Element [args.length];
+        for (int i = 0; i < args.length; i++) {
+            elementsArray[i] = args[i];
+        }
+    }
+
     public Line(String n, Element [] lea) {
         this.name = n;
-        lineElementArray = lea;
+        elementsArray = lea;
     }
 
     public String getName() {
@@ -23,10 +30,10 @@ public class Line {
     }
 
     public Element[] getLineElementArray() {
-        return lineElementArray;
+        return elementsArray;
     }
 
     public void setLineElementArray(Element[] lineElementArray) {
-        this.lineElementArray = lineElementArray;
+        this.elementsArray = lineElementArray;
     }
 }

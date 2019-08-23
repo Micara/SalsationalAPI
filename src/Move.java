@@ -2,33 +2,41 @@ import java.util.ArrayList;
 
 public class Move {
 
-    private ArrayList<Line> moves;
+    private ArrayList<Line> lineArrayList;
 
     public Move() {
+        lineArrayList = new ArrayList<Line>();
+    }  
 
+    public Move (ArrayList<Line> mArr) {
+        lineArrayList = mArr;
     }
 
     /*********************
      * ACCESS AND MUTATE *
      *********************/
 
-    public void addMove(Line l) {
-        moves.add((l));
+    public void addLine(Line l) {
+        lineArrayList.add((l));
     }
 
-    public Line getMove(int i) {
-        return moves.get(i);
+    public ArrayList<Line> getLines() {
+        return lineArrayList;
     }
 
-    public void setMove(int i, Line l) {
-        moves.set(i, l);
+    public Line getLine(int i) {
+        return lineArrayList.get(i);
+    }
+
+    public void setLine(int i, Line l) {
+        lineArrayList.set(i, l);
     }
 
     public void removeMove(int i) {
-        moves.remove(i);
+        lineArrayList.remove(i);
     }
 
     public void removeMove(Line l) {
-        moves.remove(l);
+        lineArrayList.remove(l);
     }
 }

@@ -18,6 +18,6 @@ public class DanceStyleFactory {
             return new Salsa();
         } 
 
-        return new DanceStyle();
+        return null;
     }
 }
